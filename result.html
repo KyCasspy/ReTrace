@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReTrace - Analysis Result</title>
+</head>
+<body>
+    <h1>Analysis Result</h1>
+    <p>The image is {{ 'authentic' if is_authentic else 'manipulated' }}.</p>
+    <img src="{{ url_for('uploaded_file', filename=image_path) }}" alt="Uploaded Image">
+    <br>
+    <a href="{{ url_for('upload_image') }}">Analyze Another Image</a>
+</body>
+</html>
